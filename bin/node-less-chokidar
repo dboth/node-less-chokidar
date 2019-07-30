@@ -214,11 +214,7 @@ const watch = (options, emitter) => {
 		 * @TODO Make sure the dependency graph is respected
 		 */
 
-		files.forEach(function(file) {
-			if (path.basename(file)[0] !== '_') {
-				renderFile(file, options, emitter);
-			}
-		});
+		renderFile("src/stylesheets/style.less", options, emitter);
 	});
 };
 
